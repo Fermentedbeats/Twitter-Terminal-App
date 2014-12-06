@@ -1,7 +1,7 @@
 require 'rake'
 require 'rspec/core/rake_task'
 
-require_relative 'config/application'
+require_relative 'config/app'
 
 desc "create the database"
 task "db:create" do
@@ -36,7 +36,7 @@ end
 
 desc 'Start IRB with application environment loaded'
 task "console" do
-  exec "irb -r./config/application"
+  exec "irb -r./config/app"
 end
 
 desc "Run the specs"
